@@ -1,0 +1,120 @@
+.barra-acciones{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* Los elementos saltan a la otra línea */
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 0.55rem 0.9rem 0.55rem 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--acento);
+    border-radius: 8px;
+    background: rgba(34, 211, 238, 0.12);
+    color: var(--texto); 
+    font: inherit; 
+    cursor: pointer; 
+}
+
+.button:hover { 
+    background: rgba(34,211,238,.22); 
+}
+
+.campo-busqueda {
+  position: relative;     
+  display: flex;
+  flex: 1;                
+  min-width: 180px;       
+}
+
+.campo-busqueda-icono {
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  pointer-events: none;    
+  opacity: 0.75;           
+}
+
+.buscador { 
+    width: 100%;  /*Ocupa todo*/
+    padding: 0.55rem 0.8rem 0.55rem 2.3rem; 
+    border-radius: 8px;
+    border: 1px solid var(--borde); 
+    background: var(--fondo); 
+    border-color: var(--borde);
+    color: var(--texto); 
+    font: inherit; 
+}
+
+.buscador::placeholder { color: var(--texto-suave); }
+
+.buscador:focus {
+  border-color: var(--acento);
+  outline: none;   /* se lo sustituye el focus-visible */
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.5rem 0;
+    color: var(--texto-suave);
+}
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--borde);
+    border-top-color: var(--acento);
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+    /* Para que el circulo no se convierta en un ovalo ya que es display: flex;*/
+    flex: none;
+}
+
+@keyframes girar { to {
+    transform: rotate(360deg);
+}}
+
+.error-banner{ 
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(248, 113, 113, 0.45);
+    border-left: 4px solid var(--peligro);
+    border-radius: 8px;
+    background: var(--peligro-tenue);
+    color: #fecaca;
+}
+
+.error-banner-icono {
+    font-size: 1.2rem;
+    flex: none;
+}
+
+.error-banner-texto { flex: 1; }
+
+.error-banner-texto strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--peligro); 
+}
+
+.error-banner-texto p {
+    margin: 0.15rem 0 0;
+    font-size: 0.78rem;
+}
+
+
+.aviso { 
+    color: var(--texto-suave); 
+    font-size: 0.85rem; 
+}

@@ -1,0 +1,49 @@
+:root {
+  color-scheme: dark;
+
+  --fondo: #0a1020;
+
+  --superficie: #121b2e;
+  --superficie-2: #18243c;
+
+  --borde: #26344f;
+  --borde-fuerte: #758096;
+
+  --texto: #e9eff8;
+  --texto-suave: #8fa1bd;
+
+  --acento: #22d3ee;
+  --acento-2: #e879f9;
+  
+  --sombra: 0 8px 24px rgba(2, 6, 23, 0.45);
+
+  --exito: #34d399;
+  --exito-fondo: #0f2a22;
+  --aviso: #fbbf24;
+  --aviso-fondo: #2a2311;
+  --peligro: #f87171;
+  --peligro-tenue: rgba(248, 113, 113, 0.10);
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  /* sirve para suavizar el renderizado de las fuentes */
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--fondo); }
+::-webkit-scrollbar-thumb {
+  background: var(--borde-fuerte);
+  border-radius: 8px;
+  border: 2px solid var(--fondo);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--texto-suave); }

@@ -1,0 +1,41 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Sirve principalmente para ocultar cualquier contenido que sobresalga */
+    overflow: hidden;
+}
+
+.app-cuerpo {
+    /* hace crezca y ocupe todo el espacio sobrante que queda disponible en el contenedor principal */
+    flex: 1;
+    display: flex;
+    min-height: 0; /* clave para que el panel pueda scrollear */
+}
+
+.header {
+    /* La cabecera nunca se comprime */
+    /* El valor 0 le indica a ese elemento 
+    que no debe encogerse aunque falte espacio en el contenedor. */
+    flex-shrink: 0;
+}
+
+.panel {
+    flex: 1;
+    min-width: 0;
+    overflow-y: auto;
+    /* Evita la propagación del desplazamiento */
+    overscroll-behavior: contain;
+    padding: 1.5rem;
+}
+
+.panel h2 {
+    margin-top: -0.5rem;
+}
+

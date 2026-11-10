@@ -1,0 +1,54 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, var(--superficie-2), var(--superficie) 70%);
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 3px solid var(--borde);
+}
+
+.header-logo{
+    width: 2rem;
+    height: 2rem;
+    filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.4));
+    /* el navegador redimensiona la imagen para que quepa por completo 
+    dentro del contenedor manteniendo su proporción original */
+    object-fit: contain;
+}
+
+.header-marca {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.header-nombre {
+    display: block;
+    /* El h1 trae margen por defecto */
+    margin: 0;  
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    color: var(--texto);
+}
+
+.header-reloj {
+    text-align: right;
+}
+
+.header-etiqueta {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;  
+    color: var(--texto-suave);
+}
+
+.header-tiempo {
+    /* tabular-nums es clave: sin él, el reloj se mueve lateralmente cada segundo. */
+  font-variant-numeric: tabular-nums; 
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--acento);
+}
